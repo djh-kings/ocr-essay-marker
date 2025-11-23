@@ -16,11 +16,31 @@ export default function MarkingDisplay({ marking, totalMarks, questionContext, w
     low: "You've made a start! Focus on the improvements below, add more detail, and you could easily boost this to 4-6 marks."
   }
 
-  // Word count analysis
+  // Word count analysis - IMPROVED LOGIC
   const targetWords = 150
-  const wordCoverage = Math.round((wordCount / targetWords) * 100)
-  const wordCountStatus = wordCount < 100 ? 'Too Short' : wordCount < 150 ? 'Needs More' : wordCount > 250 ? 'Too Long' : 'Good Length'
-  const wordCountColor = wordCount < 100 ? 'text-error' : wordCount < 150 ? 'text-warning' : wordCount > 250 ? 'text-warning' : 'text-success'
+  const maxWords = 250
+  const wordCoverage = Math.min(100, Math.round((wordCount / targetWords) * 100)) // Cap at 100%
+  
+  // Better status messages
+  let wordCountStatus = ''
+  let wordCountColor = ''
+  
+  if (wordCount < 100) {
+    wordCountStatus = 'Too Short'
+    wordCountColor = 'text-error'
+  } else if (wordCount < 150) {
+    wordCountStatus = 'Needs More'
+    wordCountColor = 'text-warning'
+  } else if (wordCount >= 150 && wordCount <= 250) {
+    wordCountStatus = 'Good Length'
+    wordCountColor = 'text-success'
+  } else if (wordCount > 250 && wordCount <= 300) {
+    wordCountStatus = 'Slightly Long'
+    wordCountColor = 'text-warning'
+  } else {
+    wordCountStatus = 'Too Long'
+    wordCountColor = 'text-error'
+  }
 
   return (
     <div className="card mb-8 border-2 border-primary">
@@ -36,13 +56,13 @@ export default function MarkingDisplay({ marking, totalMarks, questionContext, w
           </div>
           <div className="text-right">
             <div className={`inline-block px-8 py-4 rounded-xl ${gradeColor} border-2 font-bold text-3xl shadow-lg`}>
-              {marking.marks >= 7 ? 'Grade 8-9' : marking.marks >= 5 ? 'Grade 6-7' : marking.marks >= 4 ? 'Grade 5' : 'Grade 3-4'}
+              {marking.marks >= 7 ? 'Grade 8/9' : marking.marks >= 5 ? 'Grade 6/7' : marking.marks >= 4 ? 'Grade 5' : 'Grade 3/4'}
             </div>
           </div>
         </div>
       </div>
 
-      {/* NEW: Answer Statistics */}
+      {/* NEW: Answer Statistics - IMPROVED */}
       <div className="grid grid-cols-3 gap-4 mb-6">
         <div className="card-sm bg-background border-2 border-secondary text-center">
           <p className="text-text-muted text-sm font-semibold mb-1">WORD COUNT</p>
@@ -55,9 +75,13 @@ export default function MarkingDisplay({ marking, totalMarks, questionContext, w
           <p className="text-xs text-text-muted mt-1">words</p>
         </div>
         <div className="card-sm bg-background border-2 border-secondary text-center">
-          <p className="text-text-muted text-sm font-semibold mb-1">COVERAGE</p>
-          <p className={`text-3xl font-bold ${wordCountColor}`}>{wordCoverage}%</p>
-          <p className="text-xs text-text-muted mt-1">of target</p>
+          <p className="text-text-muted text-sm font-semibold mb-1">TARGET MET</p>
+          <p className={`text-3xl font-bold ${wordCountColor}`}>
+            {wordCount >= 150 && wordCount <= 250 ? 'Yes' : 'No'}
+          </p>
+          <p className="text-xs text-text-muted mt-1">
+            {wordCount < 150 ? `Need ${150 - wordCount} more` : wordCount > 250 ? `${wordCount - 250} over` : 'Good range'}
+          </p>
         </div>
       </div>
 
