@@ -8,11 +8,6 @@ export default function MarkingDisplay({ marking, totalMarks, questionContext })
 
   // Determine band display
   const bandLabel = marking.band.charAt(0).toUpperCase() + marking.band.slice(1)
-  const bandEmoji = {
-    high: '🌟',
-    mid: '📈',
-    low: '📝'
-  }[marking.band]
 
   return (
     <div className="card mb-8 border-2 border-primary">
@@ -24,7 +19,7 @@ export default function MarkingDisplay({ marking, totalMarks, questionContext })
           <div>
             <p className="text-blue-200 text-sm font-semibold mb-2">YOUR SCORE</p>
             <p className="text-6xl font-bold">{marking.marks}<span className="text-3xl text-blue-200">/{totalMarks}</span></p>
-            <p className="text-blue-100 mt-2 text-lg">{percentage}% • {bandEmoji} {bandLabel} Band</p>
+            <p className="text-blue-100 mt-2 text-lg">{percentage}% - {bandLabel} Band</p>
           </div>
           <div className="text-right">
             <div className={`inline-block px-6 py-3 rounded-lg ${gradeColor} border-2 font-bold text-2xl`}>
@@ -38,8 +33,7 @@ export default function MarkingDisplay({ marking, totalMarks, questionContext })
       <div className="space-y-6">
         {/* Overall Feedback */}
         <div className="card-sm bg-blue-50 border-2 border-primary">
-          <h3 className="font-bold text-primary mb-3 flex items-center gap-2">
-            <span className="text-xl">💬</span>
+          <h3 className="font-bold text-primary mb-3">
             Overall Feedback
           </h3>
           <p className="text-text-body leading-relaxed">{marking.feedback}</p>
@@ -48,8 +42,7 @@ export default function MarkingDisplay({ marking, totalMarks, questionContext })
         {/* Strengths */}
         {marking.strengths && marking.strengths.length > 0 && (
           <div className="card-sm bg-green-50 border-2 border-success">
-            <h3 className="font-bold text-success mb-3 flex items-center gap-2">
-              <span className="text-xl">✅</span>
+            <h3 className="font-bold text-success mb-3">
               What You Did Well
             </h3>
             <ul className="space-y-2">
@@ -66,8 +59,7 @@ export default function MarkingDisplay({ marking, totalMarks, questionContext })
         {/* Areas for Improvement */}
         {marking.improvements && marking.improvements.length > 0 && (
           <div className="card-sm bg-orange-50 border-2 border-accent">
-            <h3 className="font-bold text-accent mb-3 flex items-center gap-2">
-              <span className="text-xl">📈</span>
+            <h3 className="font-bold text-accent mb-3">
               How to Improve Your Answer
             </h3>
             <ul className="space-y-2">
@@ -84,8 +76,7 @@ export default function MarkingDisplay({ marking, totalMarks, questionContext })
         {/* Missing Elements */}
         {marking.missingElements && marking.missingElements.length > 0 && (
           <div className="card-sm bg-purple-50 border-2 border-purple-400">
-            <h3 className="font-bold text-purple-700 mb-3 flex items-center gap-2">
-              <span className="text-xl">🔍</span>
+            <h3 className="font-bold text-purple-700 mb-3">
               Key Points You Missed
             </h3>
             <ul className="space-y-2">
@@ -102,7 +93,7 @@ export default function MarkingDisplay({ marking, totalMarks, questionContext })
 
       {/* Next Steps */}
       <div className="mt-8 card-sm bg-background border-2 border-secondary">
-        <h3 className="font-bold text-primary mb-3">📚 Next Steps for Revision</h3>
+        <h3 className="font-bold text-primary mb-3">Next Steps for Revision</h3>
         <ul className="space-y-2 text-text-body text-sm">
           <li>• Review the mark scheme criteria for {questionContext}</li>
           <li>• Practice writing balanced answers that cover BOTH sides</li>
@@ -115,7 +106,7 @@ export default function MarkingDisplay({ marking, totalMarks, questionContext })
       {/* Disclaimer */}
       <div className="mt-6 card-sm bg-yellow-50 border-2 border-warning">
         <p className="text-sm text-text-body">
-          <strong className="text-warning">⚠️ Remember:</strong> This AI marking is a guide to help your revision. 
+          <strong className="text-warning">Remember:</strong> This AI marking is a guide to help your revision. 
           Always review your work with your teacher, and remember that in the real exam, 
           examiners will consider the full context of your response.
         </p>

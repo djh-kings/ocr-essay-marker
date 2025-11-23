@@ -87,7 +87,7 @@ export default function AnswerInput({
 
       {wordCount > 0 && wordCount < 30 && (
         <p className="mt-3 text-sm text-warning font-semibold">
-          ⚠️ Your answer is quite short. 8-mark questions typically require 150-200 words to fully address all criteria.
+          Warning: Your answer is quite short. 8-mark questions typically require 150-200 words to fully address all criteria.
         </p>
       )}
     </div>
