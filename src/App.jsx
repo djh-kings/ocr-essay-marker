@@ -133,7 +133,7 @@ function App() {
               <li><strong>5.</strong> Review your marks and learn how to improve</li>
             </ol>
             <p className="text-sm text-text-muted mt-4">
-              💡 <strong>Tip:</strong> This is a revision tool - use it alongside your class notes and past exam practice.
+              <strong>Tip:</strong> This is a revision tool - use it alongside your class notes and past exam practice.
             </p>
           </section>
 
