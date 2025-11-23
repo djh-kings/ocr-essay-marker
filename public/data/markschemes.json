@@ -1,0 +1,222 @@
+[
+  {
+    "id": "2024-j277-01-q4",
+    "totalMarks": 8,
+    "assessmentObjective": "AO3",
+    "markBands": {
+      "high": {
+        "marks": "7-8",
+        "descriptor": "Detailed discussion with balanced coverage of open source and proprietary licensing. Clear recommendation with strong justification. Comprehensive coverage of features, legal/ethical issues, and benefits/drawbacks. Evidence is well-structured and clearly communicated."
+      },
+      "mid": {
+        "marks": "4-6",
+        "descriptor": "Sound discussion with reasonable coverage of both licence types. Some attempt at recommendation. Coverage of most required elements but may lack depth or balance. Information is supported by limited evidence and the relationship to the evidence may not be clear."
+      },
+      "low": {
+        "marks": "1-3",
+        "descriptor": "Limited discussion, may focus on only one licence type. Basic or no recommendation. Limited understanding shown; material is basic and contains inaccuracies. Information is communicated in an unstructured way with limited evidence."
+      }
+    },
+    "keyPoints": {
+      "openSourceFeatures": [
+        "Source code is available to view/modify",
+        "Free to use and distribute",
+        "Community can contribute improvements",
+        "No restrictions on modification"
+      ],
+      "proprietaryFeatures": [
+        "Source code is hidden/protected",
+        "Usually costs money to purchase/licence",
+        "Company controls updates and modifications",
+        "Legal restrictions on distribution"
+      ],
+      "openSourceBenefits": [
+        "Free for users - wider audience",
+        "Community can fix bugs quickly",
+        "Transparency builds trust",
+        "Can be modified for specific needs"
+      ],
+      "openSourceDrawbacks": [
+        "No guaranteed income for programmer",
+        "Quality control challenges",
+        "Support may be limited",
+        "Others could profit from your work"
+      ],
+      "proprietaryBenefits": [
+        "Programmer earns money from sales",
+        "Control over product quality",
+        "Professional support can be offered",
+        "Intellectual property is protected"
+      ],
+      "proprietaryDrawbacks": [
+        "Smaller potential audience due to cost",
+        "Users cannot fix bugs themselves",
+        "Dependent on programmer for updates",
+        "Less transparency may reduce trust"
+      ],
+      "legalIssues": [
+        "Copyright protection differs",
+        "Licensing terms must be clear",
+        "Open source licences have conditions (e.g. GPL)",
+        "Proprietary needs end-user licence agreement"
+      ],
+      "ethicalIssues": [
+        "Open source supports freedom/sharing",
+        "Proprietary may exclude those who cannot pay",
+        "Community contributions vs individual profit",
+        "Transparency vs business confidentiality"
+      ]
+    },
+    "recommendation": {
+      "expected": "Clear choice of open source OR proprietary with justified reasoning based on programmer's goals (income vs reach, control vs community, etc.)"
+    },
+    "commonMistakes": [
+      "Only discussing one licence type",
+      "Focusing on general software quality rather than licensing",
+      "No clear recommendation made",
+      "Not considering the specific context of a game",
+      "Confusing features with benefits",
+      "Missing legal/ethical dimensions"
+    ],
+    "examinerComments": "Candidates who did well considered both positive and negative aspects of BOTH licence types, gave a clear recommendation, and explicitly addressed legal/ethical issues. Weaker responses were one-sided or discussed generic software issues rather than licensing specifically."
+  },
+  {
+    "id": "2023-j277-01-q4",
+    "totalMarks": 8,
+    "assessmentObjective": "AO3",
+    "markBands": {
+      "high": {
+        "marks": "7-8",
+        "descriptor": "Detailed discussion considering multiple stakeholder perspectives (customers, shop owners, security staff, privacy advocates). Balanced coverage of benefits and drawbacks. Clear consideration of ethical issues. Well-structured and clearly communicated."
+      },
+      "mid": {
+        "marks": "4-6",
+        "descriptor": "Sound discussion with some consideration of different groups. Covers benefits AND drawbacks but may lack balance or depth. Some ethical consideration. Information supported by limited evidence."
+      },
+      "low": {
+        "marks": "1-3",
+        "descriptor": "Limited discussion, may be one-sided (only positive OR only negative). Basic understanding of stakeholders. Limited or no ethical consideration. Unstructured with limited evidence."
+      }
+    },
+    "keyPoints": {
+      "benefitsToShoppers": [
+        "Improved safety/security",
+        "Better shopping experience if shops optimised based on tracking data",
+        "Lost children could be found quickly"
+      ],
+      "benefitsToShopOwners": [
+        "Enhanced security - reduce theft/crime",
+        "Customer analytics for store layout",
+        "Marketing insights from movement patterns",
+        "Emergency response improvements"
+      ],
+      "benefitsToCCTVOperators": [
+        "AI reduces workload - don't need to watch all cameras",
+        "Faster identification of incidents",
+        "More effective monitoring"
+      ],
+      "drawbacksToShoppers": [
+        "Privacy invasion - being watched constantly",
+        "Data could be misused",
+        "Uncomfortable feeling of surveillance",
+        "False identification possible",
+        "No consent given"
+      ],
+      "drawbacksToShopOwners": [
+        "Expensive to implement AI systems",
+        "May deter customers who value privacy",
+        "Legal responsibility for data protection",
+        "Technical failures possible"
+      ],
+      "ethicalIssues": [
+        "Right to privacy vs public safety",
+        "Consent - people may not know they're being tracked",
+        "Data security and who has access",
+        "Potential for discrimination/bias in AI",
+        "Function creep - data used beyond original purpose",
+        "Surveillance culture concerns"
+      ]
+    },
+    "commonMistakes": [
+      "Only discussing CCTV in general, not the AI tracking aspect specifically",
+      "One-sided response (entirely positive or entirely negative)",
+      "Not considering different groups of people",
+      "No explicit ethical discussion",
+      "Generic security discussion without shopping centre context"
+    ],
+    "examinerComments": "Strong responses considered both positive and negative sides of using AI in CCTV, gave balanced perspectives from different groups (customers, shop owners, security), and explicitly discussed ethical issues like privacy. Weaker responses focused purely on CCTV in general rather than the specific use of AI for tracking individuals."
+  },
+  {
+    "id": "2022-j277-01-q4",
+    "totalMarks": 8,
+    "assessmentObjective": "AO3",
+    "markBands": {
+      "high": {
+        "marks": "7-8",
+        "descriptor": "Detailed discussion considering multiple stakeholder perspectives (users, platform owners, content creators, society). Balanced coverage of benefits and drawbacks. Clear consideration of ethical issues. Well-structured."
+      },
+      "mid": {
+        "marks": "4-6",
+        "descriptor": "Sound discussion with some consideration of different groups. Covers benefits AND drawbacks but may lack balance. Some ethical consideration. Information supported by limited evidence."
+      },
+      "low": {
+        "marks": "1-3",
+        "descriptor": "Limited discussion, may be one-sided. Basic understanding of stakeholders. Limited or no ethical consideration. Unstructured with limited evidence."
+      }
+    },
+    "keyPoints": {
+      "benefitsToUsers": [
+        "Protected from harmful/offensive content",
+        "Safer online environment, especially for children",
+        "Faster removal of unacceptable content",
+        "24/7 monitoring (AI doesn't need breaks)"
+      ],
+      "benefitsToPlatform": [
+        "Reduced human moderation costs",
+        "Faster response to problems",
+        "Legal compliance easier",
+        "Better reputation if harmful content removed",
+        "Can process huge volumes of posts"
+      ],
+      "benefitsToContentCreators": [
+        "Platform feels safer to post on",
+        "Less likely to be targeted by abuse"
+      ],
+      "drawbacksToUsers": [
+        "False positives - acceptable content removed wrongly",
+        "Censorship concerns",
+        "May not understand context/satire/sarcasm",
+        "Inconsistent decisions"
+      ],
+      "drawbacksToPlatform": [
+        "Expensive to develop/maintain AI",
+        "Negative publicity if mistakes made",
+        "May remove too much content",
+        "Users may leave if over-moderated"
+      ],
+      "drawbacksToContentCreators": [
+        "Posts wrongly removed",
+        "Freedom of expression limited",
+        "Unclear what counts as 'unacceptable'",
+        "No human judgment of context"
+      ],
+      "ethicalIssues": [
+        "Free speech vs protection from harm",
+        "Who decides what is 'unacceptable'",
+        "Bias in AI training data",
+        "Lack of human judgment and context",
+        "Transparency - users may not know posts are AI-monitored",
+        "Appeal process if wrongly removed",
+        "Cultural differences in acceptability"
+      ]
+    },
+    "commonMistakes": [
+      "Only discussing AI in general, not social media monitoring specifically",
+      "One-sided response (only benefits or only drawbacks)",
+      "Not considering different groups of people",
+      "No explicit ethical discussion",
+      "Focusing on technical aspects rather than societal impact"
+    ],
+    "examinerComments": "Strong responses gave balanced discussions considering both benefits and drawbacks to multiple stakeholder groups, and explicitly addressed ethical concerns such as free speech, bias, and transparency. Weaker responses were entirely one-sided or discussed generic AI topics rather than the specific scenario of social media content monitoring."
+  }
+]

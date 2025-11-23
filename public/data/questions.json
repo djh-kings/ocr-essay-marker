@@ -1,0 +1,41 @@
+[
+  {
+    "id": "2024-j277-01-q4",
+    "year": 2024,
+    "month": "June",
+    "paper": "J277/01",
+    "questionNumber": 4,
+    "marks": 8,
+    "topic": "1.6.1 Legal, ethical and cultural issues",
+    "command": "Discuss",
+    "question": "A computer programmer has developed a computer game that they want to release for users to download over the internet. The programmer needs to decide whether to release the game as open source or proprietary software.\n\nDiscuss the features, benefits and drawbacks of each type of licence for this program and make a recommendation to the programmer.\n\nYou should include the following in your answer:\n• features of each licence\n• legal and ethical issues of each licence\n• benefits and drawbacks of each licence.",
+    "context": "Computer game development and software licensing",
+    "timeAllocation": "8-10 minutes"
+  },
+  {
+    "id": "2023-j277-01-q4",
+    "year": 2023,
+    "month": "June",
+    "paper": "J277/01",
+    "questionNumber": 4,
+    "marks": 8,
+    "topic": "1.6.2 Ethical, cultural and environmental concerns",
+    "command": "Discuss",
+    "question": "A shopping centre uses CCTV cameras to monitor customers. The shopping centre is considering using AI (Artificial Intelligence) to track individuals as they move around the shopping centre.\n\nDiscuss the use of AI to track individuals in a shopping centre.\n\nYou should consider:\n• the benefits to different groups of people\n• the drawbacks to different groups of people\n• the ethical issues.",
+    "context": "AI surveillance in public spaces",
+    "timeAllocation": "8-10 minutes"
+  },
+  {
+    "id": "2022-j277-01-q4",
+    "year": 2022,
+    "month": "June",
+    "paper": "J277/01",
+    "questionNumber": 4,
+    "marks": 8,
+    "topic": "1.6.2 Ethical issues - AI and social media",
+    "command": "Discuss",
+    "question": "A social media platform uses AI (Artificial Intelligence) to monitor posts made by users. The AI automatically removes posts that it considers to contain unacceptable content.\n\nDiscuss the use of AI to monitor posts on a social media platform.\n\nYou should consider:\n• the benefits to different groups of people\n• the drawbacks to different groups of people\n• the ethical issues.",
+    "context": "AI content moderation on social media",
+    "timeAllocation": "8-10 minutes"
+  }
+]
