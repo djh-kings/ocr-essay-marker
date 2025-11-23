@@ -12,6 +12,7 @@ function App() {
   const [marking, setMarking] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
+  const [attemptedQuestions, setAttemptedQuestions] = useState(new Set())
 
   // Load questions and mark schemes on mount
   useEffect(() => {
@@ -94,6 +95,9 @@ function App() {
       const result = await response.json()
       setMarking(result)
       
+      // Track that this question has been attempted
+      setAttemptedQuestions(prev => new Set([...prev, selectedQuestion.id]))
+      
       // Scroll to results
       setTimeout(() => {
         document.getElementById('marking-results')?.scrollIntoView({ 
@@ -116,12 +120,68 @@ function App() {
     setError(null)
   }
 
+  const handleTryAgain = () => {
+    setMarking(null)
+    // Scroll back to answer input
+    setTimeout(() => {
+      document.getElementById('answer-input')?.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+      document.getElementById('answer-input')?.focus()
+    }, 100)
+  }
+
+  const handleNewQuestion = () => {
+    // Move to next question or first if at end
+    const currentIndex = questions.findIndex(q => q.id === selectedQuestion.id)
+    const nextIndex = (currentIndex + 1) % questions.length
+    setSelectedQuestion(questions[nextIndex])
+    setAnswer('')
+    setMarking(null)
+    setError(null)
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-5xl mx-auto px-10 py-10">
         <Header />
         
         <main id="main-content" className="bg-white rounded-2xl shadow-visulearn p-8 mb-8">
+          {/* NEW: Progress Tracker */}
+          {questions.length > 0 && (
+            <div className="mb-8 p-4 bg-background rounded-xl border-2 border-secondary">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-sm font-bold text-text-body uppercase tracking-wide">Your Progress</h3>
+                <span className="text-sm font-semibold text-primary">
+                  {attemptedQuestions.size} / {questions.length} Questions Attempted
+                </span>
+              </div>
+              <div className="flex gap-2">
+                {questions.map((q, index) => (
+                  <div
+                    key={q.id}
+                    className={`flex-1 h-2 rounded-full transition-all ${
+                      attemptedQuestions.has(q.id)
+                        ? 'bg-success'
+                        : q.id === selectedQuestion?.id
+                        ? 'bg-accent'
+                        : 'bg-secondary'
+                    }`}
+                    title={`${q.year} ${q.month} Q${q.questionNumber}`}
+                  />
+                ))}
+              </div>
+              <div className="flex justify-between mt-2 text-xs text-text-muted">
+                <span>Completed</span>
+                <span>Current</span>
+                <span>Not Started</span>
+              </div>
+            </div>
+          )}
+
           {/* Instructions */}
           <section className="mb-8">
             <h3 className="text-2xl font-semibold text-text-body mb-4">How to Use This Tool</h3>
@@ -178,6 +238,9 @@ function App() {
               marking={marking}
               totalMarks={selectedQuestion.marks}
               questionContext={selectedQuestion.context}
+              wordCount={answer.trim().split(/\s+/).filter(w => w.length > 0).length}
+              onTryAgain={handleTryAgain}
+              onNewQuestion={handleNewQuestion}
             />
           </div>
         )}
